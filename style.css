@@ -32,7 +32,7 @@ html{
   #image,#profile-photo{
       position: relative;
       width: 220px;
-      height: 250px;
+      height: 205px;
       border-radius: 20px;
   }
   #name{
@@ -126,6 +126,7 @@ html{
   }
   #sidepanel-section-title{
     line-height: 30px;
+    margin-bottom: 5px;
   }
   #social-thumbnail{
       position: relative;
