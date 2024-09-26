@@ -82,36 +82,38 @@
 					<ul>
 						<p class="tag">Kyndryl<br><span>Platform Engineer | <span>2021-now</span></span></p>
 						<ul>
-							<li>Here I was part of the team building services in Azure from ground up. I made sure best practices were followed, managed deployments and infrastructure with gitops practices and Jenkins pipelines</li>
-							<li>Involved in setting up and managing APIM, Application gateway, Function apps, event hubs, Key vaults, AKS, monitoring & alerting, networking, storage accounts</li>
-							<li>Occasionally also supporting a dev team with AWS services</li>
+							<li>Architected and deployed multi-tier applications in AWS using EC2 instances, Elastic Load Balancers, and Auto Scaling Groups to ensure high availability and scalability.</li>
+							<li>Automated infrastructure provisioning and management using Terraform, significantly reducing the time required to set up development environments.</li>
+							<li>Implemented serverless solutions using AWS Lambda to automate routine tasks such as data backups and system health checks, reducing manual intervention by 30%.</li>
+							<li>Optimized AWS cost management by identifying and terminating underutilized resources, resulting in a 20% reduction in monthly cloud expenses.</li>
+							<li>Led disaster recovery planning and implementation by setting up automated failover mechanisms and data replication across AWS regions.</li>
 							<br>
 						</ul>
 						<p class="tag">IBM<br><span>DevOps Engineer | <span>2019-2021</span></span></p>
 						<ul>
-							<li>Here I helped the client establish DevOps practices such as IaC, CI/CD, participated in designing a new architecture and migrating services to it</li>
-							<li>Architectural design, deployment and L1-L3 support of a development environment - stack: RHEL 7, RStudio, Jupyter notebooks, Shiny server, OpenPBS</li>
-							<li>Cooperation with developers - app deployment and support</li>
-							<li>Ansible for config management of the entire environment</li>
-							<li>Zabbix for monitoring and reporting</li>
-							<li>Design and implementation of an ETL stage for generating reports</li>
-							<li>Azure DevOps for CI/CD pipelines, git repos and kanban boards</li>
-							<li>Migration to containerized services</li>
+							
+							<li>Configured and managed SSL/TLS certificates for secure communication on web servers, ensuring compliance with security standards and enhancing data protection.</li>
+							<li>Automated the renewal process for SSL certificates using Bash, reducing manual intervention and ensuring continuous secure connections.</li>
+							<li>Deployed and managed IBM UrbanCode Deploy for application deployments, streamlining the release process and reducing deployment errors.</li>
+							<li>Set up and maintained reverse proxy servers using Apache Web Server to distribute incoming traffic across multiple backend servers, improving load distribution and redundancy.</li>
+							
 							<br>
 						</ul>
 						<p class="tag">Capgemini<br><span>Middleware SME | <span>2017-2019</span></span></p>
 						<ul>
-							<li>Administration of SAP ABAP and portal systems and Oracle/Informix databases</li>
+							<li>Managed middleware clusters to provide high availability and load balancing, ensuring seamless application operation during peak loads.</li>
+							<li>Performed capacity planning and performance tuning for middleware environments to ensure they can handle increased loads and maintain performance.</li>
+							<li>Automated routine housekeeping tasks such as log rotation, disk space management, and system monitoring to maintain a clean and efficient operating environment.</li>
+							<li>Collaborated with development teams to troubleshoot and resolve middleware-related issues, ensuring minimal impact on application performance and availability.</li>
 						</ul>
 						<p class="tag">TCS<br><span>WebSphere Administrator | <span>2012-2017</span></span></p>
 						<ul>
-							<li>Linux and HP-UX server administration, responsibility for L2 and L3 support tasks</li>
-							<li>Basic network configuration</li>
-							<li>Server installation and configuration</li>
-							<li>Cluster management and configuration - HP Serviceguard and Veritas Cluster</li>
-							<li>Extensive knowledge of HP LVM, basic knowledge Veritas Volume Manager</li>
-							<li>Virtualization with HP nPar, vPar and HP Virtual machine</li>
-							<li>Worked for major customers in various enterprise environments: Philips, Centrica British Gas, O2 Germany, T-Mobile UK, Orange UK, T-Com Germany</li>
+							
+							<li>Installed and configured IBM WebSphere Application Server across various environments (development, testing, and production), ensuring optimal performance and reliability.</li>
+							<li>Configured and managed JDBC data sources and connection pools for efficient database connectivity and performance.</li>
+							<li>Configured and managed IBM HTTP Server (IHS) as the web server fronting WebSphere Application Server, ensuring efficient load balancing and request handling.</li>
+							<li>Managed JMS resources such as connection factories and queues, ensuring reliable and efficient messaging between distributed components.</li>
+							
 							<br>
 						</ul>
 					</ul>
@@ -119,34 +121,23 @@
 				<div class="page">
 					<p>&nbsp;&nbsp;&nbsp;Other Projects</p>
 					<ul>
-						<p class="tag">Homelab<br><span>playing with stuff | <span>2019-now</span></span></p>
+						<p class="tag">Homelab<br></p>
 						<ul>
-							<ul>2022 - self-hosted kubernetes cluster</ul>
-							<li>Multi-master cluster with Rook/Ceph and MetalLB</li>
-							<li>Currently playing with HA Wordpress hosting</li>
-							<ul>2022 - HW upgrade</ul>
-							<li>Proxmox HA cluster</li>
-							<ul>2021 - pfSense router</ul>
-							<li>Home network split into several physical networks for different purposes</li>
-							<li>VLANs will be added later with networking hardware upgrade</li>
-							<ul>2021 - Weather station</ul>
-							<li>Powered by a Raspberry pi zero and a BOSCH air quality module</li>
-							<li>Stuck outside my window in a tinfoil-covered chewing gum plastic box</li>
-							<li>Data exported by Prometheus and gathered on my server</li>
-							<li>API is published so that this web page can now show the temperature in real time</li>
-							<li>Bonus - heater turns on when temperature inside drops</li>
-							<ul>2020 - Proxmox hypervisor</ul>
-							<li>Self-managed NAS</li>
-							<li>In-house DNS server</li>
-							<li>TLS proxy for multiple domains hosted on and off this server, including this resume</li>
-							<li>Monitored with Prometheus&amp;Grafana</li>
-							<li>Several VMs with room to play with stuff</li>
-							<ul>2019 - Raspberry pi</ul>
-							<li>Initially, it was used for hosting services like Nextcloud, Pihole, playing with automation...</li>
-							<li>Right now, it's used as a backup server for the homelab, as well as a quorum device for a HA cluster</li>
+							<ul>Reddit Bot</ul>
+							<li>Developed a Reddit bot using PRAW to scrape data from subreddits, analyzing engagement trends and producing line charts with Matplotlib.</li>
+							<li>Hosted on AWS Lambda, triggered by Eventbridge.</li>
+							<ul>Weather Report</ul>
+							<li>Automated weather data collection from a public API, storing the data in a sheet for historical analysis and reporting, and sending alerts using the Twilio API.</li>
+							<li>AWS Lambda, S3 and Eventbridge used.</li>
+							<ul>Index Tracker</ul>
+							<li>Created a Python script to monitor Sensex index data, fetching real-time prices and trends</li>
+							<ul>Snakes and Ladders Game</ul>
+							<li>Created a Snakes and Ladders game using the Pygame module, implementing game logic, graphics, and user interaction for an engaging experience.</li>
+							<ul>Cloud Storage Utility - Cloudbox</ul>
+							<li>Developed a command-line utility, Cloudbox, using Bash and AWS S3, to manage cloud storage operations like upload, download, and sync efficiently.</li>
 							<br>
 						</ul>
-						<p class="tag">This resume<br><span>inspired by <a href="https://cloudresumechallenge.dev" target="_blank" class="link">cloudresumechallenge.dev</a> | <span>2020</span></span></p>
+						<p class="tag">This resume<br><span>inspired by <a href="https://cloudresumechallenge.dev" target="_blank" class="link">cloudresumechallenge.dev</a></span></p>
 						<ul>
 							<li>Hosted on AWS S3</li>
 							<li>Code versioned on my <a href="https://github.com/amithub29/resume-webpage" target="_blank" class="link">GitHub</a></li>
