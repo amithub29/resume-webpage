@@ -1,13 +1,15 @@
 
 html{
     font-family: 'Poppins',sans-serif;
+    background: #121212;
   }
   hr{
-      background: grey;
+
   }
   #container{
       position: relative;
       display: flex;
+      color: #FFFFFF;
   }
   #sidebar{
       flex: 15%;
@@ -40,7 +42,7 @@ html{
       line-height: 20px;
   }
   #description{
-      color: #555;
+      color: #c7c7c7;
       font-size: 14px;
   }
   .page > ul > li{
@@ -50,11 +52,11 @@ html{
       width: 100%;
   }
   .page{
-      box-shadow: 0px 0px 20px -9px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 20px -8px rgba(0, 191, 255, 0.75);
       overflow-x: hidden;
       margin-bottom: 30px;
       padding: 15px 30px 30px 30px;
-      background-color: #fff;
+      background-color: #1E1E1E;
   }
   .page > p{
       font-size: 19px;
@@ -68,10 +70,10 @@ html{
   }
   .tag span{
       font-size: 14px;
-      color: #0e141e;
+      color: #E0E0E0;
   }
   .tag span span{
-      color: #738f93;
+      color: #84b9d0;
   }
   @media screen and (max-width:1090px){
       #sidebar{
@@ -94,25 +96,26 @@ html{
     display:inline;
     font-family: 'Poppins', Courier, monospace;
     font-size: 14px !important;
-    background: #d1d1d1;
+    background: #04203b;
     padding: 2px;
     border-radius: 4px;
     line-height: 35px;
+    margin-bottom: 5px;
   }
   #skill:hover {
-    background-color: #b8b8b8;
+    background-color: #031323;
   }
   #skill-stronger {
     display:inline;
     font-family: 'Poppins', Courier, monospace;
     font-size: 16px !important;
-    background: #b8b8b8;
+    background: #082b5a;
     padding: 3px;
     border-radius: 5px;
     line-height: 35px;
   }
   #skill-stronger:hover {
-    background-color: #a3a3a3;
+    background-color: #041c33;
   }
   .cryptedmail:after {
     content: attr(data-name) "." attr(data-surname) "@" attr(data-domain) "." attr(data-tld);
@@ -133,6 +136,10 @@ html{
       width: 40px;
       border-radius: 20px;
   }
+  #social-thumbnail-mail{
+    position: relative;
+    width: 40px;
+  }
   #cert-thumbnail{
       position: relative;
       width: 100px;
@@ -140,7 +147,7 @@ html{
   }
   .link{
     text-decoration: none;
-    color: #708090;
+    color: #608bff;
     font-weight: normal;
     font-family: 'Poppins', Courier, monospace;
   }
@@ -149,10 +156,11 @@ html{
     list-style-type: disc;
     line-height: 20px;
     font-family: 'Montserrat', sans-serif;
+    color: #E0E0E0;
   }
   .counter{
     font-size: 14px;
-    color: #545454;
+    color: #c18400;
     font-weight: bold;
     position: absolute;
     left: 50%;
