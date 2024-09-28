@@ -3,9 +3,6 @@ html{
     font-family: 'Poppins',sans-serif;
     background: #121212;
   }
-  hr{
-
-  }
   #container{
       position: relative;
       display: flex;
