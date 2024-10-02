@@ -23,7 +23,7 @@ jobs:
     - name: Fetch bucket name from SSM
       id: fetch-bucket
       run: |
-        BUCKET_NAME=$(aws ssm get-parameter --name "/resume_website/prod/s3/bucket_name" --query "Parameter.Value" --output text)
+        BUCKET_NAME=$(aws ssm get-parameter --name "/resume_website/prod/s3/front_end/bucket_name" --query "Parameter.Value" --output text)
         # echo "::set-output name=bucket::${BUCKET_NAME}"
         echo "bucket=$BUCKET_NAME" >> $GITHUB_OUTPUT
 
@@ -33,3 +33,5 @@ jobs:
           --exclude "terraform/*" \
           --exclude ".gitignore" \
           --exclude "README.md" \
+          --exclude ".git" \
+          --exclude ".github" \
