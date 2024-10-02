@@ -33,5 +33,5 @@ jobs:
           --exclude "terraform/*" \
           --exclude ".gitignore" \
           --exclude "README.md" \
-          --exclude ".git" \
-          --exclude ".github" \
+          --exclude ".git/*" \
+          --exclude ".github/*" \
