@@ -1,0 +1,34 @@
+name: Resume Frontend Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    
+    - name: Fetch bucket name from SSM
+      id: fetch-bucket
+      run: |
+        BUCKET_NAME=$(aws ssm get-parameter --name "/resume_website/prod/s3/bucket_name" --query "Parameter.Value" --output text)
+        echo "::set-output name=bucket::${BUCKET_NAME}"
+
+    - name: Sync files to S3
+      run: |
+        aws s3 sync . s3://${{ steps.fetch-bucket.outputs.bucket }} \
+          --exclude "terraform/*" \
+          --exclude ".gitignore" \
+          --exclude "README.md" \
