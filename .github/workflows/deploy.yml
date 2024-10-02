@@ -24,7 +24,8 @@ jobs:
       id: fetch-bucket
       run: |
         BUCKET_NAME=$(aws ssm get-parameter --name "/resume_website/prod/s3/bucket_name" --query "Parameter.Value" --output text)
-        echo "::set-output name=bucket::${BUCKET_NAME}"
+        # echo "::set-output name=bucket::${BUCKET_NAME}"
+        echo "bucket=$BUCKET_NAME" >> $GITHUB_OUT
 
     - name: Sync files to S3
       run: |
