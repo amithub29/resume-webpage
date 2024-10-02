@@ -9,6 +9,7 @@ on:
       - 'style.css'
       - 'script.js'
       - 'images/**'
+  workflow_dispatch:  #This allows manual triggering
 
 jobs:
   deploy:
