@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Fetch values from SSM Parameter Store
-bucket_name=$(aws ssm get-parameter --name "/resume_website/prod/s3/bucket_name" --query "Parameter.Value" --output text)
+bucket_name=$(aws ssm get-parameter --name "/resume_website/prod/s3/remote_backend/bucket_name" --query "Parameter.Value" --output text)
 dynamodb_table_name=$(aws ssm get-parameter --name "/resume_website/prod/dynamodb/backend_table" --query "Parameter.Value" --output text)
 
 # Write the values to the backend configuration file
