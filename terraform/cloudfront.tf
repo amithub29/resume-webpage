@@ -71,3 +71,15 @@ resource "aws_cloudfront_cache_policy" "cloud_resume_cache_policy" {
     enable_accept_encoding_gzip = true
   }
 }
+
+# DNS Record
+resource "aws_route53_record" "resume" {
+  zone_id = var.route53_zone_id
+  name    = var.record_name_resume
+  type    = "A"
+  alias {
+    name                   = aws_cloudfront_distribution.cloud_resume_distribution.domain_name
+    zone_id                = aws_cloudfront_distribution.cloud_resume_distribution.hosted_zone_id
+    evaluate_target_health = false
+  }
+}

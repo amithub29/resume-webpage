@@ -17,3 +17,11 @@ variable "alternate_domain_alias" {
 variable "acm_certificate_arn" {
   default = "arn:aws:acm:us-east-1:891377355669:certificate/c350e8f9-1074-41b2-a35e-81ca10b6d7e4"
 }
+
+variable "route53_zone_id" {
+  default = "Z057302811HFS2OPLWOST"
+}
+
+variable "record_name_resume" {
+  default = "resume.amitmehta.cloud"
+}
