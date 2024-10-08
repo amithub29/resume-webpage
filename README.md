@@ -1,11 +1,11 @@
 # Cloud Resume Challenge
 
-**Frontend repository** of *[resume.amitmehta.cloud](https://amitmehta.cloud)*
+**Frontend repository** of *<a href="https://resume.amitmehta.cloud" target="_blank">resume.amitmehta.cloud</a>*
 
-This project is inspired by the [Cloud Resume Challenge](https://cloudresumechallenge.dev/) and showcases my resume using modern cloud services and best practices in web development and deployment.
+This project is inspired by the <a href="https://cloudresumechallenge.dev/" target="_blank">Cloud Resume Challenge</a> and showcases my resume using modern cloud services and best practices in web development and deployment.
 
 ## Website
-Check out the live website [here](https://amitmehta.cloud)
+Check out the live <a href="https://resume.amitmehta.cloud" target="_blank">website</a>
 
 ## Architecture Diagram
 
@@ -49,9 +49,15 @@ The backend handles the view counter functionality, updating and retrieving the 
 3. The **Lambda function**, written in Python, interacts with **DynamoDB** to fetch the view count.
 4. The view count is returned to the frontend and displayed to the user.
 
+## Terraform Setup
+
+To avoid hard coding bucket names and DynamoDB table names, an `initialize.sh` script is created. This script fetches the necessary parameters from AWS SSM Parameter Store and uses them to configure the `backend.hcl` file through Terraform's partial configuration feature. This setup ensures that the remote backend is properly configured without exposing sensitive information.
+
+
 ## CI/CD Pipeline
 
 The CI/CD pipeline is configured using **GitHub Actions** to automate the deployment process. Every commit to the `main` branch triggers the workflow defined in `.github/workflows/deploy.yml`, which:
+
 - **Checks out the repository.**
 - **Syncs the content to the S3 bucket.**
 - **Invalidates the CloudFront cache** to ensure changes are reflected immediately.
